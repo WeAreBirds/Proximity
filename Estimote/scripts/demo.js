@@ -14,6 +14,9 @@ function onBeaconsReceived(result) {
             msg += "Distance: " + beacon.distance + " m<br/>";
             msg += "Major / Minor: " + beacon.major + " / " + beacon.minor + "<br/>";
             msg += "Rssi: " + beacon.rssi + "<br/>";
+            if (beacon.major === 14831 && beacon.minor === 60422) {
+                alert('coucou petite perruche');
+            }
         }
         document.getElementById('beaconlog').innerHTML = msg;
     }
